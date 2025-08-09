@@ -1,3 +1,5 @@
+path_oli = r"PATH_TO_YOUR_OLI_FILES"
+
 import struct
 import argparse
 
@@ -48,7 +50,7 @@ def extract_file(file):
 
 from pathlib import Path
 
-oli_dir = Path(r"/mnt/hdd/ZombiFile/oli") #PATH_TO_YOUR_OLI_FILES
+oli_dir = Path(path_oli)
 oli_files = oli_dir.glob("*.oli")
 broken_files = []
 
