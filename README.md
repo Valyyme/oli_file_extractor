@@ -9,7 +9,9 @@ Edit path_oli to the path where your .oli files reside.
 
 ### How to run ?
 Clone the repository or download it as zip
+
 Open a terminal in the directory where extract.py resides
+
 Run `python3 extract.py` and append flags 
 
 ### Flags 
