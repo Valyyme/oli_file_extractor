@@ -29,6 +29,7 @@ def extract_file(file):
     texts = []
     with open(file, "rb") as f:
         data = f.read()
+        
     try:
 
         filename, next_offset = read_utf16le_string(data, offset=0x2d, override_next_offset=0x4)
@@ -42,6 +43,8 @@ def extract_file(file):
             # Then read the next block (e.g., first translation string)
             text1, next_offset = read_utf16le_string(data, offset=next_offset)
             texts.append(text1)
+
+        return texts
     except UnicodeDecodeError as e:
         if args.force:
             return texts
